@@ -4,6 +4,7 @@ import { CustomerViewComponent } from './customer-view/customer-view.component';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
 import {StoreModule} from '@ngrx/store';
 import {customerFeatureKey, reducer} from './store/reducer/customer.reducer';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,7 @@ import {customerFeatureKey, reducer} from './store/reducer/customer.reducer';
     CustomerAddComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule,FormsModule,
     StoreModule.forFeature(customerFeatureKey, reducer),
   ],
   exports: [

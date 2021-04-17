@@ -6,7 +6,14 @@ export const addCustomer = createAction(
     ( customer : Customer) => ({ customer })
 );
 
-
+export const deleteCustomer = createAction(
+    '[Customer] delete Customers' ,
+     ( index : number) => ({ index })
+ );
+ export const updateCustomer = createAction(
+    '[Customer] update Customers' ,
+     ( index : number , payload) => ({ index , payload})
+ );
 
 
 

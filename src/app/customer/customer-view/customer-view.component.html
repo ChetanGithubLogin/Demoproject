@@ -1,5 +1,6 @@
 <h4>List of Customers</h4>
 <div *ngFor="let customer of customers$ | async; let i=index">
-  <span >{{i+1}}.</span> {{customer.name}}
-</div>
+  <span >{{i+1}}.</span>{{customer.name}} <input #boxName><button (click)="deleteCustomer(i)">Delete</button>
+  <button (click)="updateCustomer(i,boxName.value)">update</button>
+</div> 
 
